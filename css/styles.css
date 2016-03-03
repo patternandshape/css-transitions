@@ -1,0 +1,250 @@
+body {
+  background: linear-gradient(50deg, #ff644d, #e63df5, #3dd0f5, #4dff82);
+  background-size: 600% 600%;
+  animation: backgAnimation 70s ease infinite;
+  height: 100vh;
+  margin: 0;
+  font-family: "Helvetica", Arial;
+}
+@keyframes backgAnimation {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+}
+
+.col-1, .col-2, .col-3 {
+  display: flex;
+  margin-top: 50px;
+}
+
+.col-1 {
+  justify-content: space-around;
+}
+
+.col-2 {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col-3 {
+  justify-content: space-around;
+  align-items: center;
+}
+/*-------------SQUARE-----------------*/
+
+.square {
+  height: 150px;
+  width: 150px;
+  background: red;
+  transition: all .5s ease-in-out;
+}
+
+.square:hover {
+  background: #0B00FF;
+  border-radius: 50%;
+}
+
+/*-------------MOON-----------------*/
+
+.moon {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  box-shadow: 40px 40px 0 0 white;
+  transition: all 1s ease-out;
+}
+
+.moon:hover {
+  background: none;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 white;
+}
+
+/*-------------LOADING-----------------*/
+
+.loading {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: solid 10px rgba(11, 31, 66, 0.4);
+  border-top-color: #1E51AB;
+  transition-duration: 10s;
+}
+
+.loading:hover {
+  transform: rotate(720deg);
+}
+
+/*-------------YIN-YANG-----------------*/
+
+.yin-yang {
+  width: 96px;
+	height: 48px;
+	background: #a58427;
+	border-color: #CBA2DF;
+  border-style: solid;
+	border-width: 2px 2px 50px 2px;
+	border-radius: 100%;
+	position: relative;
+  transform: scale(2);
+  transition: transform 1s;
+}
+
+.yin-yang:before {
+  content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #a58427;
+	border: 18px solid #CBA2DF;
+	border-radius: 100%;
+	width: 12px;
+	height: 12px;
+}
+
+.yin-yang:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #CBA2DF;
+	border: 18px solid #a58427;
+	border-radius:100%;
+	width: 12px;
+	height: 12px;
+}
+
+.yin-yang:hover {
+  transform: skew(25deg, 10deg);
+}
+
+/*-------------EGG-----------------*/
+
+.egg {
+  display:block;
+  width: 126px;
+  height: 180px;
+  background-color: #4CBEDD;
+  border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%;
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+  -webkit-transform:rotate(6deg);
+  }
+  50% {
+  -webkit-transform:rotate(-6deg);
+  }
+  100% {
+  -webkit-transform:rotate(6deg);
+  }
+}
+
+.wiggle:hover {
+	-webkit-animation: wiggle 0.5s infinite;
+}
+
+/*-------------3-D-----------------*/
+
+.text {
+  transition: transform 5s;
+}
+
+h1 {
+  text-decoration: none;
+  font-size: 7em;
+  color: #666;
+  display: block;
+  /* effect 3D */
+  text-shadow:-0.06em 0 red, 0.06em 0 cyan;
+}
+
+.text:hover {
+  transform: rotate(1080deg);
+}
+
+/*-------------PARALLELOGRAM-----------------*/
+
+.parallelogram {
+	width: 150px;
+	height: 100px;
+	transform: skew(20deg);
+  background: #0DDD5F;
+}
+
+/*-------------INFINITY-----------------*/
+
+.infinity {
+    position: relative;
+    width: 212px;
+    height: 100px;
+}
+
+.infinity:before,
+.infinity:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid white;
+    -moz-border-radius: 50px 50px 0 50px;
+    border-radius: 50px 50px 0 50px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.infinity:after {
+    left: auto;
+    right: 0;
+    -moz-border-radius: 50px 50px 50px 0;
+    border-radius: 50px 50px 50px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*-------------HEXAGON-----------------*/
+.hexagon {
+	width: 100px;
+	height: 55px;
+	background: red;
+	position: relative;
+}
+.hexagon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid red;
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+}
