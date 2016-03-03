@@ -18,6 +18,8 @@ Some doodles we made with CSS transitions. Enjoy!
 * Atom
 * Terminal
 
+#####CSS Transitions can be viewed at http://patternandshape.github.io/css-transitions
+
 ##### License
 
 *This software is licensed under the MIT license.*
